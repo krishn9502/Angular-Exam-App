@@ -1,0 +1,23 @@
+<div class="top-nav-section" ng-cloak>
+    <ul>
+        <li ng-repeat="(keyName, value) in questionsCtrl.selectedQuestionSection">
+            <a ng-click="globalExamStatus.getSectionFirstQuestion(keyName)" ng-class="{'selected': questionsCtrl.getSelectedClass(keyName)}" class="button-type">{{keyName}}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="question-box">
+    <div ng-if="!questionsCtrl.selectedQuestion.questionNo">
+        No details found!
+    </div>
+    <div ng-if="questionsCtrl.selectedQuestion.questionNo">
+        <h3>Question No. {{questionsCtrl.selectedQuestion.questionNo}}</h3>
+        <p>{{questionsCtrl.selectedQuestion.questionDesc}}</p>
+
+        <p class="error-message" ng-if="questionsCtrl.answerNotAllworedAfterMaxAttempt()" class="wranning">Max attempt No. is {{questionsCtrl.selectedPart.maxAttemptQuestion}} from selected section</p>
+
+        <select ng-class="{'selected': questionsCtrl.answerNotAllworedAfterMaxAttempt()}" ng-disabled="questionsCtrl.answerNotAllworedAfterMaxAttempt()" multiple="" class="question-options-list">
+            <option ng-click="questionsCtrl.modifyQuestionDetails('isComplete', {key: key})" ng-selected="questionsCtrl.selectedQuestion.answerEntered === key" ng-class="{'selected': questionsCtrl.selectedQuestion.answerEntered === key}" ng-repeat="(key, value) in questionsCtrl.selectedQuestion.options">{{key}}:- {{value}}</option>
+        </select>
+    </div>
+</div>

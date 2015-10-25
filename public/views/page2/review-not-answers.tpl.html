@@ -1,0 +1,26 @@
+<div class="question-box" ng-cloak>
+	<div class="error-message" ng-if="!(globalExamStatus.allQuestions | filter: {isVisited: true, isComplete: false}).length">
+		no answwred questions message...
+	</div>
+	<div class="question-details" ng-repeat="question in globalExamStatus.allQuestions | filter: {isVisited: true, isComplete: false}">
+		<div class="left-section">
+			<div class="content">
+				<b>Question No. {{question.questionNo}}</b>
+				<br/>
+				<b>Options</b>
+
+			</div>
+		</div>
+		<div class="right-section">
+			<div class="content">
+				<p>{{question.questionDesc}}</p>
+				<br/>
+				<div ng-repeat="(key, value) in question.options track by $index">
+					{{key}}:- {{value}} 
+				</div>
+				<div class="clarfix"></div>
+			</div>
+		</div>
+		<div class="clarfix"></div>
+	</div>
+</div>

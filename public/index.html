@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="ExamApp">
+<head>
+	<title>Institute For Advanced Studies (IFAS)</title>
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- LIBS FILES -->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="angular-ui-router.js"></script>
+	
+	<!-- APP BOOTSTRAP FILE -->
+	<script type="text/javascript" src="app.js"></script>
+	
+	<!-- APP ROUTER -->
+	<script type="text/javascript" src="js/router.js"></script>
+	
+	<!-- APP UTILITY -->
+	<script type="text/javascript" src="js/services/utility.js"></script>
+	
+	<!-- APP CONTROLLERS -->
+	<script type="text/javascript" src="js/controllers/page1-header.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/page1-footer.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/global-exam-status.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/page1-main.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/page1-sidebar.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/questions.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/complete-question-paper.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/exam-end.ctrl.js"></script>
+	<script type="text/javascript" src="js/controllers/review-answers.ctrl.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="globalExamStatusCtrl as globalExamStatus">
+		<!-- HEADER -->
+		<div ui-view="header"></div>
+
+		<div class="row no-pad">
+			<div class="col-md-12 no-pad">
+				<!-- FULLVIEW -->
+				<div ui-view="fullView"></div>
+			</div>
+
+			<div class="col-md-8 no-pad">
+				<!-- QUESTIONS -->
+				<div ui-view="main"></div>
+			</div>
+
+			<div class="col-md-3 pull-right no-pad">
+				<!-- RIGHT SIDEBAR -->
+				<div ui-view="sidebar"></div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div ui-view="footer"></div>
+	</div>
+</body>
+</html>

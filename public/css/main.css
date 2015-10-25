@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body {
+    font-family: arial;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.no-pad {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+.clarfix {
+    clear: both;
+    height: 0px;
+    width: 100%;
+}
+/**** HEADER ***/
+
+.header-container,
+.footer-container {
+    box-shadow: 1px 0px 2px #000;
+    padding: 0px;
+}
+.top-nav-section {
+    padding-top: 20px;
+}
+.top-nav-section ul {
+    list-style: none;
+}
+.top-nav-section li {
+    display: inline-block;
+    padding-right: 15px;
+}
+.sidebar {} .footer-container > div,
+.header-container > div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+/**** SIDEBAR ***/
+
+.sidebar-container {
+    padding: 10px 0;
+}
+.sidebar-container.submit {
+    border: 1px solid #ccc;
+}
+.sidebar-container .btn-test-marks {
+    margin: 10px 0;
+}
+.sidebar-container .box {} .sidebar-container ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.sidebar-container li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+.sidebar-container li {
+    a.btn {}
+}
+/**** FOOTER ***/
+
+.footer-container {
+    position: fixed;
+    bottom: 0px;
+}
+.question-box {
+    border: 1px solid #ccc;
+    min-height: 200px;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 160px;
+    max-height: 450px;
+    overflow: auto;
+    margin-top: 20px;
+}
+.question-options-list {
+    width: 100%;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+.question-options-list option {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+.button-type {
+    background: #34b3e6;
+    padding: 5px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    min-width: 37px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000;
+    border-radius: 4px;
+}
+.button-type:hover {
+    color: #000;
+}
+.button-type.selected,
+.button-type.not-visited {
+    background: #0b86b7;
+}
+.button-type.selected:hover {
+    color: #fff;
+}
+.button-type.answered {
+    background: #b1de27;
+}
+.button-type.not-answered {
+    background: #ff6f6f;
+}
+.button-type.marked {
+    background: #fec725;
+}
+.button-type.normal {
+    background: #34b3e6;
+}
+.btn-type {
+    cursor: pointer;
+    display: block;
+}
+.question-details {
+    border-bottom: 1px solid #ccc;
+    background: #f1f1f1;
+}
+
+.question-details.no-answered {
+    color: red;
+}
+
+.question-details.answered {
+    color: green;
+}
+
+.question-details.marked {
+    color: yellow;
+}
+
+.question-details .left-section {
+    display: inline-block;
+    width: 29%;
+    min-height: 50px;
+}
+.question-details .right-section {
+    display: inline-block;
+    width: 70%;
+    float: right;
+    background: #fff;
+}
+.question-details .left-section > div.content,
+.question-details .right-section > div.content {
+    padding: 10px;
+}
+.question-pallete {
+    padding: 10px;
+}
+.question-pallete-h3 {
+    text-align: center;
+}
+.total-question-lists {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.status-indicator {
+    padding-left: 10px;
+}
+.status-indicator ul {
+    padding: 0px;
+    margin: 0px;
+}
+.status-indicator ul li {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+    min-width: 127px;
+    text-align: left;
+}
+
+.exam-status-details-parent, .btn-test-marks-parent {
+	position: relative;
+}
+
+.btn-test-marks-parent.global {
+    width: 200px;
+}
+
+.btn-test-marks-parent:hover .exam-status-details, .exam-status-details-parent:hover .exam-status-details{
+	display: block;
+}
+
+.exam-status-details-text {
+	cursor: pointer;
+	display: block;
+}
+
+.exam-status-details {
+	display: none;
+	list-style: none;
+	text-align: left;
+	background: #fff;
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	z-index: 9999;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-shadow: 1px 2px 5px #ccc;
+}
+
+.exam-status-details li {
+	text-align: left;
+	text-transform: capitalize;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+}
+
+.exam-status-details li span {
+	display: inline-block; width: 80%;
+}
+
+.examend {
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.error-message {
+    background: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    color: red;
+    padding: 10px;
+}
+
+.answered {
+    color: green;
+    font-weight: bold;
+    background: #f1f1f1;
+    padding: 5px;
+}
